@@ -25,6 +25,7 @@ public class CrearAuto extends Thread {
         for (int x = 1; x <= numAutos; x++) {
             auto = new Auto(estacionamiento, numEspacios, entrando, saliendo, mutex);
             auto.addObserver(controller);
+            hilo = new Thread(auto);
             hilo.setDaemon(true);
             hilo.start();
             try {

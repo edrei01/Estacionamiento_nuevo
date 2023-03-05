@@ -1,6 +1,7 @@
 package sample;
 
 import Model.CrearAuto;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 
@@ -17,13 +18,13 @@ public class Controller implements Observer {
 
     public void update(Observable o, Object arg) {
         if(arg.toString().charAt(0) == 'E') {
+            entrando(Integer.valueOf(arg.toString().split("E")[1]));
         }
     }
     public void iniciar(){
         config();
         CrearAuto crearAuto = new CrearAuto(this);
         crearAuto.start();
-
     }
 
     public void config(){
@@ -47,6 +48,11 @@ public class Controller implements Observer {
         cajones[17] = caj17;
         cajones[18] = caj18;
         cajones[19] = caj19;
+
+    }
+    public void entrando(int numCajon){
+        System.out.println(numCajon+" Entrando");
+        Platform.runLater(() -> cajones[numCajon].setVisible(true));
 
     }
 
