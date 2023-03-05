@@ -1,10 +1,13 @@
 package sample;
 
-
+import Model.CrearAuto;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 
-public class Controller {
+import java.util.Observable;
+import java.util.Observer;
+
+public class Controller implements Observer {
     @FXML
     private ImageView caj0, caj1, caj2, caj3, caj4, caj5, caj6, caj7, caj8, caj9, caj10,
                         caj11, caj12, caj13, caj14, caj15, caj16, caj17, caj18, caj19;
@@ -12,13 +15,14 @@ public class Controller {
     private ImageView[] cajones = new ImageView[20];
     int[] cajonesEstacionamiento = {0, 0, 0, 0, 0,};
 
-
-
+    public void update(Observable o, Object arg) {
+        if(arg.toString().charAt(0) == 'E') {
+        }
+    }
     public void iniciar(){
         config();
-
-    }
-    public void auto(){
+        CrearAuto crearAuto = new CrearAuto(this);
+        crearAuto.start();
 
     }
 
@@ -45,6 +49,5 @@ public class Controller {
         cajones[19] = caj19;
 
     }
-
 
 }
