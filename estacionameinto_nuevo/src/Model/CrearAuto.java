@@ -25,11 +25,11 @@ public class CrearAuto extends Thread {
         for (int x = 1; x <= numAutos; x++) {
             auto = new Auto(estacionamiento, numEspacios, entrando, saliendo, mutex);
             auto.addObserver(controller);
-            hilo = new Thread(auto);
+            hilo = new Thread(auto,"Auto" + x);
             hilo.setDaemon(true);
             hilo.start();
             try {
-                int num = (int) Math.floor(Math.random() * (5 - 1 + 1) + 1);
+                int num = (int) Math.floor(Math.random() * (5 ) + 1);
                 Thread.sleep(num * 100);
             } catch (InterruptedException e) {
                 e.printStackTrace();

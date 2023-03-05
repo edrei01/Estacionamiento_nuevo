@@ -33,7 +33,7 @@ public class Auto extends Observable  implements Runnable {
                                 this.setChanged();
                                 this.notifyObservers("esperandoE");
 
-                                Thread.sleep(10);
+
                                 mutex.acquire();
                                 this.setChanged();
                                 this.notifyObservers("pasando");
@@ -43,7 +43,37 @@ public class Auto extends Observable  implements Runnable {
                                 e.printStackTrace();
                         }
                         System.out.println("Entrando"+Thread.currentThread().getName());
+                        try {
+                                mutex.acquire();
+                                numEntrando--;
+                                if(numEntrando == 0){
+                                        entrando.release();
+                                }
 
+                                mutex.release();
+                        } catch (InterruptedException e) {
+                                e.printStackTrace();
+                        }
+
+                        int numCajon = 99;
+                        try {
+                                mutex.acquire();
+                                numCajon = estacionamiento.estacionar();
+                                this.setChanged();
+                                this.notifyObservers("E"+numCajon);
+                        } catch (InterruptedException e) {
+                                e.printStackTrace();
+                        }
+                        mutex.release();
+
+                        int num = (int)Math.floor(Math.random()*(5)+1);
+                        System.out.println("Estoy adentro un rato"+Thread.currentThread().getName() +" por "+num*1000);
+
+                        try {
+                                Thread.sleep(num*2000);
+                        } catch (InterruptedException e) {
+                                e.printStackTrace();
+                        }
                 }
         }
 }
