@@ -14,7 +14,6 @@ public class Controller implements Observer {
                         caj11, caj12, caj13, caj14, caj15, caj16, caj17, caj18, caj19;
 
     private ImageView[] cajones = new ImageView[20];
-    int[] cajonesEstacionamiento = {0, 0, 0, 0, 0,};
 
     public void update(Observable o, Object arg) {
         if(arg.toString().charAt(0) == 'E') {

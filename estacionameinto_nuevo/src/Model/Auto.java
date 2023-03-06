@@ -49,7 +49,6 @@ public class Auto extends Observable  implements Runnable {
                                 if(numEntrando == 0){
                                         entrando.release();
                                 }
-
                                 mutex.release();
                         } catch (InterruptedException e) {
                                 e.printStackTrace();
@@ -70,10 +69,37 @@ public class Auto extends Observable  implements Runnable {
                         System.out.println("Estoy adentro un rato"+Thread.currentThread().getName() +" por "+num*1000);
 
                         try {
-                                Thread.sleep(num*2000);
+                                Thread.sleep(num*1000);
                         } catch (InterruptedException e) {
                                 e.printStackTrace();
                         }
+                        try {
+                                this.setChanged();
+                                this.notifyObservers("esperandoS");
+                                Thread.sleep(10);
+                                mutex.acquire();
+                                estacionamiento.dejarCajon(numCajon);
+                                this.setChanged();
+                                this.notifyObservers("S"+numCajon);
+                        } catch (InterruptedException e) {
+                                e.printStackTrace();
+                        }
+                        mutex.release();
+
+                        try {
+                                mutex.acquire();
+                                if(numEntrando > 0){
+                                        entrando.acquire();
+                                }
+                                numSaliendo++;
+                                mutex.release();
+                        } catch (InterruptedException e) {
+                                e.printStackTrace();
+                        }
+                        System.out.println("Ahora estoy saliendo"+Thread.currentThread().getName());
+                        this.setChanged();
+                        this.notifyObservers("saliendo");
+
                 }
         }
 }

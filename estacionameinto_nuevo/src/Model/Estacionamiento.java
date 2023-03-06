@@ -16,5 +16,8 @@ public class Estacionamiento {
         cajones[index] = 1;
         return index;
     }
+    public void dejarCajon(int numCajon){
+        cajones[numCajon] = 0;
+    }
 }
 
