@@ -32,7 +32,7 @@ public class Auto extends Observable  implements Runnable {
                         try {
                                 this.setChanged();
                                 this.notifyObservers("esperandoE");
-
+                                Thread.sleep(300);
 
                                 mutex.acquire();
                                 this.setChanged();
@@ -76,7 +76,7 @@ public class Auto extends Observable  implements Runnable {
                         try {
                                 this.setChanged();
                                 this.notifyObservers("esperandoS");
-                                Thread.sleep(10);
+                                Thread.sleep(300);
                                 mutex.acquire();
                                 estacionamiento.dejarCajon(numCajon);
                                 this.setChanged();
@@ -100,6 +100,23 @@ public class Auto extends Observable  implements Runnable {
                         this.setChanged();
                         this.notifyObservers("saliendo");
 
+                        try {
+                                mutex.acquire();
+                                numSaliendo--;
+                                if(numSaliendo == 0){
+                                        saliendo.release();
+                                }
+                                mutex.release();
+                        } catch (InterruptedException e) {
+                                e.printStackTrace();
+                        }
+
+                        try {
+                                Thread.sleep(2000);
+                        } catch (InterruptedException e) {
+                                e.printStackTrace();
+                        }
+                        numEspacios.release();
                 }
         }
 }

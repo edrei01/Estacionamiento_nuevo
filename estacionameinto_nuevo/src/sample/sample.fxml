@@ -14,68 +14,114 @@
       </ImageView>
       <Button layoutX="635.0" layoutY="453.0" mnemonicParsing="false" onAction="#iniciar" text="Iniciar" />
       <ImageView fx:id="imgSaliendo" fitHeight="75.0" fitWidth="97.0" layoutX="255.0" layoutY="287.0" visible="false">
-
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="imgEntrando" fitHeight="75.0" fitWidth="88.0" layoutX="441.0" layoutY="474.0" visible="false">
-
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj5" fitHeight="88.0" fitWidth="44.0" layoutX="198.0" layoutY="3.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/rojo.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj0" fitHeight="88.0" fitWidth="44.0" layoutX="198.0" layoutY="192.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj1" fitHeight="88.0" fitWidth="44.0" layoutX="149.0" layoutY="192.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj2" fitHeight="88.0" fitWidth="44.0" layoutX="101.0" layoutY="192.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj3" fitHeight="88.0" fitWidth="44.0" layoutX="53.0" layoutY="192.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj4" fitHeight="88.0" fitWidth="44.0" layoutX="5.0" layoutY="192.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj6" fitHeight="88.0" fitWidth="44.0" layoutX="149.0" layoutY="3.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj7" fitHeight="88.0" fitWidth="44.0" layoutX="101.0" layoutY="3.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj8" fitHeight="88.0" fitWidth="44.0" layoutX="53.0" layoutY="3.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj9" fitHeight="88.0" fitWidth="44.0" layoutX="5.0" layoutY="3.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/rojo.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj19" fitHeight="88.0" fitWidth="44.0" layoutX="671.0" layoutY="3.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj14" fitHeight="88.0" fitWidth="44.0" layoutX="671.0" layoutY="192.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/rojo.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj13" fitHeight="88.0" fitWidth="44.0" layoutX="622.0" layoutY="192.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/rojo.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj12" fitHeight="88.0" fitWidth="44.0" layoutX="574.0" layoutY="192.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj11" fitHeight="88.0" fitWidth="44.0" layoutX="526.0" layoutY="192.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/rojo.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj10" fitHeight="88.0" fitWidth="44.0" layoutX="478.0" layoutY="192.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../img/rojo.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj18" fitHeight="88.0" fitWidth="44.0" layoutX="622.0" layoutY="3.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/rojo.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj17" fitHeight="88.0" fitWidth="44.0" layoutX="574.0" layoutY="3.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/azul.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj16" fitHeight="88.0" fitWidth="44.0" layoutX="526.0" layoutY="3.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/rojo.png" />
+         </image>
       </ImageView>
       <ImageView fx:id="caj15" fitHeight="88.0" fitWidth="44.0" layoutX="478.0" layoutY="3.0" pickOnBounds="true" visible="false">
-
+         <image>
+            <Image url="@../img/rojo.png" />
+         </image>
       </ImageView>
    </children>
 </AnchorPane>
